@@ -1,0 +1,51 @@
+.header-banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: lightgray 1px solid;
+}
+
+.header-logo,
+.header-motto {
+    padding: 10px;
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2em;
+    width: fit-content;
+}
+
+.header-title {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.header-subtitle {
+    font-style: italic;
+}
+
+.header-nav {
+    height: 4em;
+}
+
+.header-link {
+    display: inline-block;
+    text-align: center;
+    height: calc(100% - 40px);
+    padding: 20px 10px;
+    width: 5em;
+    border-left: lightgray 1px solid;
+}
+
+.header-link:last-child {
+    border-right: lightgray 1px solid;
+}
+
+.header-motto {
+    font-size: 1.25em;
+    font-style: italic;
+}
+

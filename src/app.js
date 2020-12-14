@@ -5,6 +5,7 @@ import {
     Route, 
     Link
 } from "react-router-dom";
+import Header from "./header/header";
 import Home from "./home";
 import Stuff from "./stuff";
 import Contact from "./contact";
@@ -12,32 +13,27 @@ import Contact from "./contact";
 export default function App() {
     return (
         <Router>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/stuff">Stuff</Link>
-                        </li>
-                        <li>
-                            <Link to="/contact">Contact</Link>
-                        </li>
-                    </ul>
-                    <Switch>
-                        <Route path="/stuff">
-                            <Stuff />
-                        </Route>
-                        <Route path="/contact">
-                            <Contact />
-                        </Route>
-                        <Route path="/">
-                            <Home />
-                        </Route>
-                    </Switch>
-                </nav>
-            </div>
+            <HeaderWarning />
+            <Header />
+            <Switch>
+                <Route path="/stuff">
+                    <Stuff />
+                </Route>
+                <Route path="/contact">
+                    <Contact />
+                </Route>
+                <Route path="/">
+                    <Home />
+                </Route>
+            </Switch>
         </Router>
+    );
+}
+
+function HeaderWarning() {
+    return (
+        <div className={"header-warning"}>
+            //  Under Constuction  //  Don't Mind the Garbage  //  Under Construction  //  Yes It's A Mess  //  Under Construction  //
+        </div>
     );
 }
