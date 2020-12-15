@@ -33,7 +33,7 @@ export default function App() {
 function HeaderWarning() {
     return (
         <div className={"header-warning"}>
-            //  Under Constuction  //  Don't Mind the Garbage  //  Under Construction  //  Yes It's A Mess  //  Under Construction  //
+            //  Under Constuction  //
         </div>
     );
 }

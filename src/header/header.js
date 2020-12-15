@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "./header.css";
 
 export default function Header() {
@@ -14,28 +16,38 @@ export default function Header() {
 
 function HeaderLogo() {
     return (
-        <span className={"header-logo"}>
+        <Link
+            className={"header-logo"}
+            to={"/"}
+        >
             <span className={"header-title"}>Robert Wise</span>
             <span className={"header-subtitle"}>Fledgling Developer</span>
-        </span>
+        </Link>
     );
 }
 
 const linkParams = [
-    { name: "Home", href: "/" },
-    { name: "Stuff", href: "/stuff" },
-    { name: "Contact", href: "/contact" },
+    { name: "About", href: "", icon: "user" },
+    { name: "Blog", href: "blog", icon: "pen" },
+    { name: "Music", href: "music", icon: "music" },
+    { name: "Projects", href: "projects", icon: "keyboard" },
 ];
 
 function HeaderNavigation() {
+    let currentLink = window.location.pathname.split('/')[1];
+    // Probably not good practice, but triggers this to rerender on url switch
+    useLocation();
+
     const links = linkParams.map(link => {
+        const active = (link.href === currentLink) ? "header-link-active" : "";
         return (
             <Link
-                className={"header-link"}
+                className={"header-link " + active}
                 key={link.name}
-                to={link.href}
+                to={"/" + link.href}
             >
-                {link.name}
+                <span>{link.name}</span>
+                <FontAwesomeIcon icon={link.icon} />
             </Link>
         );
     });
