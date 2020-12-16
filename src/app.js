@@ -3,12 +3,12 @@ import {
     BrowserRouter as Router,
     Switch,
     Route, 
-    Link
 } from "react-router-dom";
 import Header from "./header/header";
-import Home from "./home";
-import Stuff from "./stuff";
-import Contact from "./contact";
+import About from "./about";
+import Blog from "./blog";
+import Music from "./music";
+import Projects from "./projects";
 
 export default function App() {
     return (
@@ -16,14 +16,17 @@ export default function App() {
             <HeaderWarning />
             <Header />
             <Switch>
-                <Route path="/stuff">
-                    <Stuff />
+                <Route path="/blog">
+                    <Blog />
                 </Route>
-                <Route path="/contact">
-                    <Contact />
+                <Route path="/music">
+                    <Music />
+                </Route>
+                <Route path="/projects">
+                    <Projects />
                 </Route>
                 <Route path="/">
-                    <Home />
+                    <About />
                 </Route>
             </Switch>
         </Router>
