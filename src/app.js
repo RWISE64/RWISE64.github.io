@@ -36,7 +36,7 @@ export default function App() {
 function HeaderWarning() {
     return (
         <div className={"header-warning"}>
-            //  Under Constuction  //
+            //  Under Construction  //
         </div>
     );
 }
