@@ -6,7 +6,8 @@
 }
 
 .header-logo,
-.header-motto {
+.header-motto,
+.header-burger {
     padding: 10px;
 }
 
@@ -65,3 +66,6 @@
     font-style: italic;
 }
 
+.header-burger {
+    font-size: 1.5em;
+}

@@ -7,13 +7,17 @@ import "./header.css";
 class Header extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            mobile: window.innerWidth <= 900,
+            trueMobile: window.innerWidth <= 500,
+        };
     }
 
     componentDidMount() {
         window.addEventListener('resize', () => {
             this.setState({
-                mobile: window.innerWidth <= 900
+                mobile: window.innerWidth <= 900,
+                trueMobile: window.innerWidth <= 500,
             });
         });
     }
@@ -23,7 +27,7 @@ class Header extends Component {
             <div className={"header-banner"}>
                 <HeaderLogo />
                 { !this.state.mobile && <HeaderDesktopNavigation /> }
-                <HeaderMotto />
+                { !this.state.trueMobile && <HeaderMotto /> }
                 { this.state.mobile && <HeaderMobileNavigation /> }
             </div>
         );
@@ -76,10 +80,14 @@ function HeaderDesktopNavigation() {
     );
 }
 
-function HeaderMobileNavigation() {
-    return (
-        <FontAwesomeIcon icon={"bars"} />
-    );
+class HeaderMobileNavigation extends Component {
+    render() {
+        return (
+            <div onClick={() => alert('yis')} class="header-burger">
+                <FontAwesomeIcon icon={"bars"} />
+            </div>
+        );
+    }
 }
 
 function HeaderMotto() {
@@ -87,5 +95,5 @@ function HeaderMotto() {
         <span className={"header-motto"}>
             "We'll get there eventually."
         </span>
-    )
+    );
 }
