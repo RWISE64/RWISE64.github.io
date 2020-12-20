@@ -1,18 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./header.css";
 
-export default function Header() {
-    return (
-        <div className={"header-banner"}>
-            <HeaderLogo />
-            <HeaderNavigation />
-            <HeaderMotto />
-        </div>
-    );
+class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', () => {
+            this.setState({
+                mobile: window.innerWidth <= 900
+            });
+        });
+    }
+
+    render() {
+        return (
+            <div className={"header-banner"}>
+                <HeaderLogo />
+                { !this.state.mobile && <HeaderDesktopNavigation /> }
+                <HeaderMotto />
+                { this.state.mobile && <HeaderMobileNavigation /> }
+            </div>
+        );
+    }
 }
+
+export default Header;
 
 function HeaderLogo() {
     return (
@@ -33,7 +51,7 @@ const linkParams = [
     { name: "Projects", href: "projects", icon: "keyboard" },
 ];
 
-function HeaderNavigation() {
+function HeaderDesktopNavigation() {
     let currentLink = window.location.pathname.split('/')[1];
     // Probably not good practice, but triggers this to rerender on url switch
     useLocation();
@@ -55,6 +73,12 @@ function HeaderNavigation() {
         <nav className={"header-nav"}>
             {links}
         </nav>
+    );
+}
+
+function HeaderMobileNavigation() {
+    return (
+        <FontAwesomeIcon icon={"bars"} />
     );
 }
 
