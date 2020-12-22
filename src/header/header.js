@@ -24,11 +24,14 @@ class Header extends Component {
 
     render() {
         return (
-            <div className={"header-banner"}>
-                <HeaderLogo />
-                { !this.state.mobile && <HeaderDesktopNavigation /> }
-                { !this.state.trueMobile && <HeaderMotto /> }
-                { this.state.mobile && <HeaderMobileNavigation /> }
+            <div className={"header"}>
+                <HeaderWarning />
+                <div className={"header-banner"}>
+                    <HeaderLogo />
+                    { !this.state.mobile && <HeaderDesktopNavigation />}
+                    { !this.state.trueMobile && <HeaderMotto />}
+                    { this.state.mobile && <HeaderMobileNavigation />}
+                </div>
             </div>
         );
     }
@@ -83,9 +86,12 @@ function HeaderDesktopNavigation() {
 class HeaderMobileNavigation extends Component {
     render() {
         return (
-            <div onClick={() => alert('yis')} class="header-burger">
-                <FontAwesomeIcon icon={"bars"} />
-            </div>
+            <>
+                <div onClick={() => alert('yis')} class="header-burger">
+                    <FontAwesomeIcon icon={"bars"} />
+                </div>
+
+            </>
         );
     }
 }
@@ -95,5 +101,13 @@ function HeaderMotto() {
         <span className={"header-motto"}>
             "We'll get there eventually."
         </span>
+    );
+}
+
+function HeaderWarning() {
+    return (
+        <div className={"header-warning"}>
+            //  Under Construction  //
+        </div>
     );
 }

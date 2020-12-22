@@ -1,3 +1,11 @@
+.header {
+    position: fixed;
+    width: 100%;
+    scroll-margin-top: 90px;
+    background-color: white;
+    box-shadow: 0 12px 10px 0 white;
+}
+
 .header-banner {
     display: flex;
     justify-content: space-around;
@@ -8,7 +16,7 @@
 .header-logo,
 .header-motto,
 .header-burger {
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .header-logo {
@@ -68,4 +76,20 @@
 
 .header-burger {
     font-size: 1.5em;
+}
+
+.header-warning {
+    background-color: yellow;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 900px) {
+    .header-banner {
+        justify-content: space-between;
+    }
 }

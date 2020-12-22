@@ -10,14 +10,8 @@ a:link, a:visited, a:hover, a:active {
     color: black;
 }
 
-.header-warning {
-    background-color: yellow;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+.generic-article {
+    padding: 85px 20px 20px 20px;
 }
 
 /* 

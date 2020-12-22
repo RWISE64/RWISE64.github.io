@@ -13,7 +13,6 @@ import Projects from "./projects";
 export default function App() {
     return (
         <Router>
-            <HeaderWarning />
             <Header />
             <Switch>
                 <Route path="/blog">
@@ -30,13 +29,5 @@ export default function App() {
                 </Route>
             </Switch>
         </Router>
-    );
-}
-
-function HeaderWarning() {
-    return (
-        <div className={"header-warning"}>
-            //  Under Construction  //
-        </div>
     );
 }
