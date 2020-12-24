@@ -5,6 +5,7 @@ import {
     Route, 
 } from "react-router-dom";
 import Header from "./header/header";
+import SidebarNavigation from "./header/sidebar";
 import About from "./about";
 import Blog from "./blog";
 import Music from "./music";
@@ -14,20 +15,25 @@ export default function App() {
     return (
         <Router>
             <Header />
-            <Switch>
-                <Route path="/blog">
-                    <Blog />
-                </Route>
-                <Route path="/music">
-                    <Music />
-                </Route>
-                <Route path="/projects">
-                    <Projects />
-                </Route>
-                <Route path="/">
-                    <About />
-                </Route>
-            </Switch>
+            <div className="content-area">
+                <div className="content">
+                    <Switch>
+                        <Route path="/blog">
+                            <Blog />
+                        </Route>
+                        <Route path="/music">
+                            <Music />
+                        </Route>
+                        <Route path="/projects">
+                            <Projects />
+                        </Route>
+                        <Route path="/">
+                            <About />
+                        </Route>
+                    </Switch>
+                </div>
+                <SidebarNavigation />
+            </div>
         </Router>
     );
 }

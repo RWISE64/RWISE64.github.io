@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import linkParams from "./links";
 import "./header.css";
 
 class Header extends Component {
@@ -30,7 +31,7 @@ class Header extends Component {
                     <HeaderLogo />
                     { !this.state.mobile && <HeaderDesktopNavigation />}
                     { !this.state.trueMobile && <HeaderMotto />}
-                    { this.state.mobile && <HeaderMobileNavigation />}
+                    { this.state.mobile && <HeaderBurger />}
                 </div>
             </div>
         );
@@ -50,13 +51,6 @@ function HeaderLogo() {
         </Link>
     );
 }
-
-const linkParams = [
-    { name: "About", href: "", icon: "user" },
-    { name: "Blog", href: "blog", icon: "pen" },
-    { name: "Music", href: "music", icon: "music" },
-    { name: "Projects", href: "projects", icon: "keyboard" },
-];
 
 function HeaderDesktopNavigation() {
     let currentLink = window.location.pathname.split('/')[1];
@@ -83,14 +77,13 @@ function HeaderDesktopNavigation() {
     );
 }
 
-class HeaderMobileNavigation extends Component {
+class HeaderBurger extends Component {
     render() {
         return (
             <>
                 <div onClick={() => alert('yis')} class="header-burger">
                     <FontAwesomeIcon icon={"bars"} />
                 </div>
-
             </>
         );
     }
