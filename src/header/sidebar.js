@@ -1,9 +1,23 @@
+import React, { Component } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import linkParams from "./links";
 
-export default function SidebarNavigation() {
+class SidebarNavigation extends Component {
+    render() {
+        console.log(this.props.sidebarOpen);
+        const closed = (this.props.sidebarOpen) ? "" : " closed";
+
+        return(
+            <nav className={"sidebar-nav" + closed}>
+                <SidebarLinks />
+            </nav>
+        );
+    }
+}
+
+function SidebarLinks() {
     // TODO Check whether this is necessary in the sidebar
     let currentLink = window.location.pathname.split('/')[1];
     // Probably not good practice, but triggers this to rerender on url switch
@@ -23,9 +37,12 @@ export default function SidebarNavigation() {
         );
     });
 
-    return(
-        <nav className={"sidebar-nav"}>
+    return (
+        <>
             {links}
-        </nav>
+        </>
     );
+    
 }
+
+export default SidebarNavigation;

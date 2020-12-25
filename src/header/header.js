@@ -1,41 +1,35 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import linkParams from "./links";
 import "./header.css";
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            mobile: window.innerWidth <= 900,
-            trueMobile: window.innerWidth <= 500,
-        };
-    }
+function Header(props) {
+    const [width, setWidth] = useState(window.innerWidth);
+    const mobileBreakpoint = 900;
+    const trueMobileBreakpoint = 500;
 
-    componentDidMount() {
-        window.addEventListener('resize', () => {
-            this.setState({
-                mobile: window.innerWidth <= 900,
-                trueMobile: window.innerWidth <= 500,
-            });
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            setWidth(window.innerWidth);
         });
-    }
+    }, []);
 
-    render() {
-        return (
-            <div className={"header"}>
-                <HeaderWarning />
-                <div className={"header-banner"}>
-                    <HeaderLogo />
-                    { !this.state.mobile && <HeaderDesktopNavigation />}
-                    { !this.state.trueMobile && <HeaderMotto />}
-                    { this.state.mobile && <HeaderBurger />}
-                </div>
+    let mobile = width <= mobileBreakpoint;
+    let trueMobile = width <= trueMobileBreakpoint;
+
+    return (
+        <div className={"header"}>
+            <HeaderWarning />
+            <div className={"header-banner"}>
+                <HeaderLogo />
+                { !mobile && <HeaderDesktopNavigation />}
+                { !trueMobile && <HeaderMotto />}
+                { mobile && <HeaderBurger toggleSidebar={() => props.toggleSidebar()}/>}
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default Header;
@@ -81,7 +75,7 @@ class HeaderBurger extends Component {
     render() {
         return (
             <>
-                <div onClick={() => alert('yis')} class="header-burger">
+                <div onClick={() => this.props.toggleSidebar()} className="header-burger">
                     <FontAwesomeIcon icon={"bars"} />
                 </div>
             </>
