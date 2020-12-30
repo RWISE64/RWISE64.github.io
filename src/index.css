@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: black;
+}
+
+.generic-article {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    /* TODO make this less terrible */
+    height: calc(100vh - 94px);
+    width: 100%;
+    overflow: auto;
+    transition: filter .5s ease-in-out;
+}
+
+.blur {
+    filter: blur(2px);
+}
+/* 
+VARIABLES
+*/
+
+:root {
+    --default-purple: #5e30a8;
+}

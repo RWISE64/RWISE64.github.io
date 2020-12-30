@@ -1,43 +1,62 @@
-import React from "react";
+import React, { Component } from "react";
 import {
     BrowserRouter as Router,
     Switch,
     Route, 
-    Link
 } from "react-router-dom";
-import Home from "./home";
-import Stuff from "./stuff";
-import Contact from "./contact";
+import Header from "./header/header";
+import SidebarNavigation from "./header/sidebar";
+import About from "./about";
+import Blog from "./blog";
+import Music from "./music";
+import Projects from "./projects";
 
-export default function App() {
-    return (
-        <Router>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/stuff">Stuff</Link>
-                        </li>
-                        <li>
-                            <Link to="/contact">Contact</Link>
-                        </li>
-                    </ul>
-                    <Switch>
-                        <Route path="/stuff">
-                            <Stuff />
-                        </Route>
-                        <Route path="/contact">
-                            <Contact />
-                        </Route>
-                        <Route path="/">
-                            <Home />
-                        </Route>
-                    </Switch>
-                </nav>
-            </div>
-        </Router>
-    );
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            sidebarOpen: false
+        };
+    }
+
+    toggleSidebar() {
+        this.setState({
+            sidebarOpen: !this.state.sidebarOpen
+        });
+        console.log(this.state.sidebarOpen);
+    }
+
+    render() {
+        let blur = (this.state.sidebarOpen) ? "blur" : "";
+        return (
+            <Router>
+                <Header 
+                    toggleSidebar={() => this.toggleSidebar()}
+                />
+                <div className={"content-area"}>
+                    <div className={"content " + blur}>
+                        <Switch>
+                            <Route path="/blog">
+                                <Blog />
+                            </Route>
+                            <Route path="/music">
+                                <Music />
+                            </Route>
+                            <Route path="/projects">
+                                <Projects />
+                            </Route>
+                            <Route path="/">
+                                <About />
+                            </Route>
+                        </Switch>
+                    </div>
+                    <SidebarNavigation 
+                        sidebarOpen={this.state.sidebarOpen}
+                    />
+                </div>
+            </Router>
+        );
+    }
 }
+
+export default App;
