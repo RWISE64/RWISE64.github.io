@@ -5,33 +5,6 @@ export default function About() {
         <div className={"generic-article"}>
             <h2>About</h2>
             <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-            <p>This will eventually contain info about me... hopefully.</p>
-
         </div>
     );
 }

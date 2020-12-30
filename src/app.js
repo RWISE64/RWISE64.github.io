@@ -27,13 +27,14 @@ class App extends Component {
     }
 
     render() {
+        let blur = (this.state.sidebarOpen) ? "blur" : "";
         return (
             <Router>
                 <Header 
                     toggleSidebar={() => this.toggleSidebar()}
                 />
-                <div className="content-area">
-                    <div className="content">
+                <div className={"content-area"}>
+                    <div className={"content " + blur}>
                         <Switch>
                             <Route path="/blog">
                                 <Blog />

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import "./sidebar.css";
 import linkParams from "./links";
 
 class SidebarNavigation extends Component {
