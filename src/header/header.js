@@ -20,7 +20,7 @@ function Header(props) {
     let trueMobile = width <= trueMobileBreakpoint;
 
     return (
-        <div className={"header header-banner"}>
+        <div className={"header"}>
             <HeaderLogo />
             { !mobile && <HeaderDesktopNavigation />}
             { !trueMobile && <HeaderMotto />}

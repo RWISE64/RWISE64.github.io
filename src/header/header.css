@@ -1,15 +1,10 @@
 .header {
     width: 100%;
     background-color: white;
-    /* box-shadow: 0 12px 10px 0 white; */
-}
-
-.header-banner {
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-bottom: lightgray 1px solid;
-    height: 64px;
 }
 
 .header-logo,
@@ -58,8 +53,8 @@ NAVIGATION
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100% - 40px);
-    padding: 20px 10px;
+    height: 100%;
+    padding: 10px;
     width: 5em;
     border-left: lightgray 1px solid;
 }

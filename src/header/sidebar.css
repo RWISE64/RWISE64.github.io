@@ -4,9 +4,8 @@
     justify-content: start;
     background-color: white;
     overflow: hidden;
+    height: 100%;
     width: 200px;
-    /* TODO Make this less terrible */
-    height: calc(100vh - 94px);
     position: absolute;
     right: 0;
     transition-delay: .1s;
