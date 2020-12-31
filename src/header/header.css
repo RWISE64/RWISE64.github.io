@@ -22,7 +22,7 @@
 
 .header-title {
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: bold;
 }
 
@@ -31,7 +31,6 @@
 }
 
 .header-motto {
-    font-size: 1.25em;
     font-style: italic;
 }
 

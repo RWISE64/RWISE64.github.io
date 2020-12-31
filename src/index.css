@@ -1,6 +1,8 @@
 html, body, #root {
     height: 100%;
     width: 100%;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 body {
@@ -25,20 +27,21 @@ a:link, a:visited, a:hover, a:active {
 .generic-article {
     padding: 20px;
     justify-content: center;
-}
-
-.content-area {
-    display: flex;
-    overflow-y: auto;
-    height: 100%;
-
+    width: 100%;
 }
 
 .content {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 800px;
     transition: filter .5s ease-in-out;
+}
+
+.content-area {
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    height: 100%;
 }
 
 .blur {
