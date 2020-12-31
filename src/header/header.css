@@ -5,6 +5,7 @@
     justify-content: space-around;
     align-items: center;
     border-bottom: var(--secondary-text) 1px solid;
+    height: var(--header-height);
 }
 
 .header * {

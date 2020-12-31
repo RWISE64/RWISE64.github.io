@@ -11,9 +11,11 @@ class SidebarNavigation extends Component {
         const closed = (this.props.sidebarOpen) ? "" : " closed";
 
         return(
-            <nav className={"sidebar-nav" + closed}>
-                <SidebarLinks />
-            </nav>
+            <div className={"sidebar"}>
+                <nav className={"sidebar-nav" + closed}>
+                    <SidebarLinks />
+                </nav>
+            </div>
         );
     }
 }
