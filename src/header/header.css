@@ -1,10 +1,15 @@
 .header {
     width: 100%;
-    background-color: white;
+    background-color: var(--tertiary-background);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: lightgray 1px solid;
+    border-bottom: var(--secondary-text) 1px solid;
+    height: var(--header-height);
+}
+
+.header * {
+    color: var(--primary-text);
 }
 
 .header-logo,
@@ -22,7 +27,7 @@
 
 .header-title {
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: bold;
 }
 
@@ -31,7 +36,6 @@
 }
 
 .header-motto {
-    font-size: 1.25em;
     font-style: italic;
 }
 
@@ -56,7 +60,7 @@ NAVIGATION
     height: 100%;
     padding: 10px;
     width: 5em;
-    border-left: lightgray 1px solid;
+    border-left: 1px solid var(--secondary-text);
 }
 
 .header-link > * {
@@ -70,12 +74,12 @@ NAVIGATION
 }
 
 .header-link:last-child {
-    border-right: lightgray 1px solid;
+    border-right: 1px solid var(--secondary-text);
 }
 
 .header-link-active {
-    -webkit-box-shadow: inset 0px -7px 5px -7px var(--default-purple); 
-    box-shadow: inset 0px -7px 5px -7px var(--default-purple);
+    -webkit-box-shadow: inset 0px -10px 9px -7px var(--default-purple); 
+    box-shadow: inset 0px -10px 9px -7px var(--default-purple);
 }
 
 .header-burger {
