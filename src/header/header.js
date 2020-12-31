@@ -21,13 +21,10 @@ function Header(props) {
 
     return (
         <div className={"header"}>
-            <HeaderWarning />
-            <div className={"header-banner"}>
-                <HeaderLogo />
-                { !mobile && <HeaderDesktopNavigation />}
-                { !trueMobile && <HeaderMotto />}
-                { mobile && <HeaderBurger toggleSidebar={() => props.toggleSidebar()}/>}
-            </div>
+            <HeaderLogo />
+            { !mobile && <HeaderDesktopNavigation />}
+            { !trueMobile && <HeaderMotto />}
+            { mobile && <HeaderBurger toggleSidebar={() => props.toggleSidebar()}/>}
         </div>
     );
 }
@@ -88,13 +85,5 @@ function HeaderMotto() {
         <span className={"header-motto"}>
             "We'll get there eventually."
         </span>
-    );
-}
-
-function HeaderWarning() {
-    return (
-        <div className={"header-warning"}>
-            //  Under Construction  //
-        </div>
     );
 }

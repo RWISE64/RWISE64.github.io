@@ -1,6 +1,17 @@
+html, body, #root {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     margin: 0;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body * {
+    box-sizing: border-box;
 }
 
 a {
@@ -13,22 +24,20 @@ a:link, a:visited, a:hover, a:active {
 
 .generic-article {
     padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
 }
 
 .content-area {
     display: flex;
-    justify-content: space-between;
+    overflow-y: auto;
+    height: 100%;
+
 }
 
 .content {
     display: flex;
     justify-content: center;
-    /* TODO make this less terrible */
-    height: calc(100vh - 94px);
     width: 100%;
-    overflow: auto;
     transition: filter .5s ease-in-out;
 }
 
