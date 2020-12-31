@@ -40,16 +40,6 @@
     font-style: italic;
 }
 
-.header-warning {
-    background-color: yellow;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
 @media screen and (max-width: 900px) {
     .header-banner {
         justify-content: space-between;
