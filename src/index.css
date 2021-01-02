@@ -10,10 +10,15 @@ body {
     background-color: var(--primary-background);
     color: var(--primary-text);
     box-sizing: border-box;
+    font-family: "Roboto Condensed";
 }
 
 body * {
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
 }
 
 a {
@@ -50,6 +55,7 @@ a:link, a:visited, a:hover, a:active {
 .blur {
     filter: blur(2px);
 }
+
 /* 
 VARIABLES
 */
@@ -63,3 +69,12 @@ VARIABLES
     --secondary-text: #B0B3B8;
     --header-height: 72px;
 }
+
+/*
+FONTS
+*/
+
+/* Roboto Slab (Headings) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;900&display=swap');
+/* Roboto Slab (General Text) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');

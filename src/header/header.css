@@ -27,16 +27,20 @@
 
 .header-title {
     text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
     font-size: 1.4em;
     font-weight: bold;
 }
 
 .header-subtitle {
     font-style: italic;
+    font-size: .9em;
+    font-weight: 300;
 }
 
 .header-motto {
     font-style: italic;
+    font-weight: 300;
 }
 
 @media screen and (max-width: 900px) {
@@ -64,6 +68,7 @@ NAVIGATION
 }
 
 .header-link > * {
+    font-family: "Roboto Slab";
     margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
