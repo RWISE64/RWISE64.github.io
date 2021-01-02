@@ -38,7 +38,7 @@ function HeaderLogo() {
             to={"/"}
         >
             <span className={"header-title"}>Robert Wise</span>
-            <span className={"header-subtitle"}>Fledgling Developer</span>
+            <span className={"header-subtitle"}>Fledgling&nbsp;Developer</span>
         </Link>
     );
 }

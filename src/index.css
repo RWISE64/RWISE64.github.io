@@ -10,10 +10,16 @@ body {
     background-color: var(--primary-background);
     color: var(--primary-text);
     box-sizing: border-box;
+    font-family: "Roboto Condensed";
+    overflow-x: hidden;
 }
 
 body * {
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
 }
 
 a {
@@ -28,6 +34,7 @@ a:link, a:visited, a:hover, a:active {
     padding: 20px;
     background-color: var(--secondary-background);
     max-width: 800px;
+    width: 100%;
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
@@ -36,7 +43,7 @@ a:link, a:visited, a:hover, a:active {
 .content {
     height: min-content;
     padding: 20px;
-    padding-bottom: calc(20px + var(--header-height));
+    width: 100%;
     transition: filter .5s ease-in-out;
 }
 
@@ -44,18 +51,41 @@ a:link, a:visited, a:hover, a:active {
     display: flex;
     justify-content: center;
     overflow-y: auto;
-    height: 100%;
+    height: calc(100% - var(--header-height));
 }
 
 .blur {
     filter: blur(2px);
 }
+
+/*
+SCROLL BAR
+*/
+::-webkit-scrollbar {
+    border-radius: 8px;
+    /* width: 20px; */
+    background: var(--tertiary-background);
+    box-shadow: inset 0 0 3px var(--secondary-text);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--default-purple);
+    border-radius: 8px;
+    -webkit-box-shadow: inset 8px 4px 4px -6px var(--default-pink); 
+    box-shadow: inset 8px 4px 4px -6px var(--default-pink);
+    /* width: 16px;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+
 /* 
 VARIABLES
 */
 
 :root {
     --default-purple: #5e30a8;
+    --default-pink: #c024b6;
     --primary-background: #18191A;
     --secondary-background: #242526;
     --tertiary-background: #3A3B3C;
@@ -63,3 +93,12 @@ VARIABLES
     --secondary-text: #B0B3B8;
     --header-height: 72px;
 }
+
+/*
+FONTS
+*/
+
+/* Roboto Slab (Headings) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;900&display=swap');
+/* Roboto Slab (General Text) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');

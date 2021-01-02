@@ -4,11 +4,10 @@
     justify-content: start;
     background-color: var(--tertiary-background);
     overflow: hidden;
-    height: 100%;
+    height: calc(100% - var(--header-height));
     width: 200px;
     position: absolute;
     right: 0;
-    transition-delay: .1s;
     transition: width .5s ease-in-out;
     border-left: 1px solid var(--secondary-text);
 }
@@ -20,6 +19,8 @@
 .closed {
     /* Chrome freaks out if you translate stuff of the page, so we are just doing width instead */
     width: 0;
+    /* Gets rid of the slight border overhang, without having it blink out of existence on transition */
+    transform: translateX(1px);
 }
 
 .sidebar-link {
@@ -27,6 +28,7 @@
     padding: 20px;
     border-bottom: 1px solid var(--secondary-text);
     line-height: 1;
+    font-family: "Roboto Slab";
 }
 
 .sidebar-link > span {
@@ -36,5 +38,4 @@
 .sidebar-link-active {
     -webkit-box-shadow: inset 10px 0px 11px -7px var(--default-purple); 
     box-shadow: inset 10px 0px 11px -7px var(--default-purple);
-    /* border-left: 1px solid var(--default-purple); */
 }
