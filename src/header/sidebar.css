@@ -4,7 +4,7 @@
     justify-content: start;
     background-color: var(--tertiary-background);
     overflow: hidden;
-    height: 100%;
+    height: calc(100% - var(--header-height));
     width: 200px;
     position: absolute;
     right: 0;
