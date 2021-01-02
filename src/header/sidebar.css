@@ -37,5 +37,4 @@
 .sidebar-link-active {
     -webkit-box-shadow: inset 10px 0px 11px -7px var(--default-purple); 
     box-shadow: inset 10px 0px 11px -7px var(--default-purple);
-    /* border-left: 1px solid var(--default-purple); */
 }
