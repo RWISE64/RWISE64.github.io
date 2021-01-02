@@ -8,7 +8,6 @@
     width: 200px;
     position: absolute;
     right: 0;
-    transition-delay: .1s;
     transition: width .5s ease-in-out;
     border-left: 1px solid var(--secondary-text);
 }
@@ -20,6 +19,8 @@
 .closed {
     /* Chrome freaks out if you translate stuff of the page, so we are just doing width instead */
     width: 0;
+    /* Gets rid of the slight border overhang, without having it blink out of existence on transition */
+    transform: translateX(1px);
 }
 
 .sidebar-link {
