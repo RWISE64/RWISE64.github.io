@@ -1,8 +1,11 @@
 import React from "react";
-import ArticleTemplate from "./articleTemplate";
+import GenericArticle from "./article/genericArticle";
 
 export default function About() {
     return (
-        <ArticleTemplate markdownName={"about.md"} />
+        <GenericArticle
+            markdownName={"about.md"}
+            articleName={"About"}
+        />
     );
 }
