@@ -1,0 +1,2 @@
+(this["webpackJsonppersonal-website"]=this["webpackJsonppersonal-website"]||[]).push([[3],{153:function(s,e,t){"use strict";t.r(e),e.default=t.p+"static/media/about.4d8249fa.md"}}]);
+//# sourceMappingURL=3.ae316092.chunk.js.map
