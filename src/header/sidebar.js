@@ -7,7 +7,6 @@ import linkParams from "./links";
 
 class SidebarNavigation extends Component {
     render() {
-        console.log(this.props.sidebarOpen);
         const closed = (this.props.sidebarOpen) ? "" : " closed";
 
         return(

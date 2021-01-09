@@ -37,7 +37,7 @@ function HeaderLogo() {
             className={"header-logo"}
             to={"/"}
         >
-            <span className={"header-title"}>Robert Wise</span>
+            <span className={"header-title"}>Robert&nbsp;Wise</span>
             <span className={"header-subtitle"}>Fledgling&nbsp;Developer</span>
         </Link>
     );
@@ -83,7 +83,7 @@ class HeaderBurger extends Component {
 function HeaderMotto() {
     return (
         <span className={"header-motto"}>
-            "We'll get there eventually."
+            "We'll&nbsp;get&nbsp;there&nbsp;eventually."
         </span>
     );
 }
