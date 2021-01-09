@@ -1,0 +1,15 @@
+.blog-link {
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--secondary-background);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.blog-links {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}

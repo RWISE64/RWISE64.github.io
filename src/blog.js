@@ -4,7 +4,9 @@ import {
     Link,
     useRouteMatch,
 } from "react-router-dom";
+
 import GenericArticle from "./article/genericArticle";
+import "./blog.css";
 
 function BlogArticle(path, markdownName, articleName) {
     return {
@@ -35,18 +37,25 @@ export default function Blog() {
             </Route>
         );
         articleLinks.push(
-            <Link to={`${url}/${article.path}`}>{article.articleName}</Link>
+            <Link
+                className={"blog-link"}
+                to={`${url}/${article.path}`}
+            >
+                {article.articleName}
+            </Link>
         );
     });
 
-    
+
 
 
     return (
         <Switch>
             {articleRoutes}
             <Route path="/">
-                {articleLinks}
+                <div className="blog-links">
+                    {articleLinks}
+                </div>
             </Route>
         </Switch>
     );
