@@ -4,22 +4,25 @@ import {
     Link,
     useRouteMatch,
 } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import GenericArticle from "./article/genericArticle";
 import "./blog.css";
 
-function BlogArticle(path, markdownName, articleName) {
+function BlogArticle(path, markdownName, articleName, icon = "file-alt", description = "No description.") {
     return {
         path: path,
         markdownName: markdownName,
-        articleName: articleName
+        articleName: articleName,
+        icon: icon,
+        description: description,
     }
 }
 
 const blogArticles = [
-    BlogArticle("test1", "blog.md", "Blog 1"),
+    BlogArticle("test1", "blog.md", "Blog 1", "info-circle", "A quick overview of the purpose of this blog."),
     BlogArticle("test2", "blog.md", "Blog 2"),
-    BlogArticle("test3", "blog.md", "Blog 3")
+    BlogArticle("test3", "blog.md", "Blog 3"),
 ];
 
 export default function Blog() {
@@ -41,7 +44,13 @@ export default function Blog() {
                 className={"blog-link"}
                 to={`${url}/${article.path}`}
             >
-                {article.articleName}
+                <div className={"blog-link-icon"}>
+                    <FontAwesomeIcon icon={article.icon} />
+                </div>
+                <div>
+                    <h1 className={"blog-link-header"}>{article.articleName}</h1>
+                    <p className={"blog-link-description"}>{article.description}</p>
+                </div>
             </Link>
         );
     });

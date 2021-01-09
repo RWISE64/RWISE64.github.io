@@ -4,6 +4,8 @@
     background-color: var(--secondary-background);
     padding: 20px;
     margin-bottom: 10px;
+    display: flex;
+    flex: 0 0 auto;
 }
 
 .blog-links {
@@ -12,4 +14,23 @@
     margin-right: auto;
     display: flex;
     flex-direction: column;
+}
+
+.blog-link-header {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.blog-link-description {
+    font-style: italic;
+    font-weight: 300;
+    font-size: .9em;
+    margin: 0;
+}
+
+.blog-link-icon {
+    font-size: 2em;
+    margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
