@@ -8,6 +8,7 @@ import Header from "./header/header";
 import SidebarNavigation from "./header/sidebar";
 import About from "./about";
 import GenericArticle from "./article/genericArticle"
+import Blog from "./blog";
 
 class App extends Component {
     constructor(props) {
@@ -35,10 +36,7 @@ class App extends Component {
                     <div className={"content " + blur}>
                         <Switch>
                             <Route path="/blog">
-                                <GenericArticle
-                                    markdownName={"blog.md"}
-                                    articleName={"Blog"}
-                                />
+                                <Blog />
                             </Route>
                             <Route path="/music">
                                 <GenericArticle
