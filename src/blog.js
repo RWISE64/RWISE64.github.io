@@ -9,18 +9,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import GenericArticle from "./article/genericArticle";
 import "./blog.css";
 
-function BlogArticle(path, markdownName, articleName, icon = "file-alt", description = "No description.") {
+function BlogArticle(path, markdownName, articleName, date, icon = "file-alt", description = "No description.") {
     return {
         path: path,
         markdownName: markdownName,
         articleName: articleName,
+        date: date,
         icon: icon,
         description: description,
     }
 }
 
 const blogArticles = [
-    BlogArticle("test1", "blog.md", "Blog 1", "info-circle", "A quick overview of the purpose of this blog."),
+    BlogArticle("test1", "blog.md", "Welcome to my Blog!", "1/9/21", "info-circle", "A quick overview of the purpose of this blog."),
     BlogArticle("test2", "blog.md", "Blog 2"),
     BlogArticle("test3", "blog.md", "Blog 3"),
 ];
@@ -47,8 +48,11 @@ export default function Blog() {
                 <div className={"blog-link-icon"}>
                     <FontAwesomeIcon icon={article.icon} />
                 </div>
-                <div>
-                    <h1 className={"blog-link-header"}>{article.articleName}</h1>
+                <div className={"blog-link-info"}>
+                    <div className={"blog-link-header"}>
+                        <h1 className={"blog-link-title"}>{article.articleName}</h1>
+                        <span className={"blog-link-date"}>{article.date}</span>
+                    </div>
                     <p className={"blog-link-description"}>{article.description}</p>
                 </div>
             </Link>

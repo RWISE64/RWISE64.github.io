@@ -16,9 +16,24 @@
     flex-direction: column;
 }
 
+.blog-link-info,
 .blog-link-header {
+    width: 100%;
+}
+
+.blog-link-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-link-title {
     font-size: 1.2em;
     margin: 0;
+    display: inline-block;
+}
+
+.blog-link-date {
+    align-self: center;
 }
 
 .blog-link-description {
@@ -33,4 +48,11 @@
     margin-right: 20px;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .blog-link-date,
+    .blog-link-icon {
+        display: none;
+    }
 }
