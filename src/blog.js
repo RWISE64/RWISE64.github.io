@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import GenericArticle from "./article/genericArticle";
 import "./blog.css";
 
-function BlogArticle(path, markdownName, articleName, date, icon = "file-alt", description = "No description.") {
+function BlogArticle(path, markdownName, articleName, date, icon = "file-alt", description = "") {
     return {
         path: path,
         markdownName: markdownName,
@@ -21,9 +21,7 @@ function BlogArticle(path, markdownName, articleName, date, icon = "file-alt", d
 }
 
 const blogArticles = [
-    BlogArticle("test1", "blog.md", "Welcome to my Blog!", "1/9/21", "info-circle", "A quick overview of the purpose of this blog."),
-    BlogArticle("test2", "blog.md", "Blog 2"),
-    BlogArticle("test3", "blog.md", "Blog 3"),
+    BlogArticle("test1", "blog.md", "Shouts to the Void", "1/9/21", "info-circle", "A quick overview of the purpose of this blog."),
 ];
 
 export default function Blog() {
@@ -37,6 +35,8 @@ export default function Blog() {
                 <GenericArticle
                     markdownName={article.markdownName}
                     articleName={article.articleName}
+                    date={article.date}
+                    description={article.description}
                 />
             </Route>
         );
