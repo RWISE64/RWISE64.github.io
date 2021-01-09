@@ -1,1 +1,0 @@
-Here's where I'll include any short articles or musings, should I chose to write them.

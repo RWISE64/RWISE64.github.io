@@ -21,7 +21,7 @@ function BlogArticle(path, markdownName, articleName, date, icon = "file-alt", d
 }
 
 const blogArticles = [
-    BlogArticle("test1", "blog.md", "Shouts to the Void", "1/9/21", "info-circle", "A quick overview of the purpose of this blog."),
+    BlogArticle("test1", "shoutsToTheVoid.md", "Shouts to the Void", "1/9/21", "info-circle", "A quick overview of the purpose of this blog."),
 ];
 
 export default function Blog() {
