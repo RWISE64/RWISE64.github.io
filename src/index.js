@@ -10,6 +10,7 @@ import {
     faInfoCircle, 
     faFileAlt,
     faCog,
+    faArrowAltCircleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 import App from "./app";
@@ -24,7 +25,8 @@ library.add(
     faBars, 
     faInfoCircle, 
     faFileAlt,
-    faCog
+    faCog,
+    faArrowAltCircleLeft,
 );
 
 /*
