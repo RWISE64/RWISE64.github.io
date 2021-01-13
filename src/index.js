@@ -1,13 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faUser, faPen, faMusic, faKeyboard, faBars, faInfoCircle, faFileAlt } from "@fortawesome/free-solid-svg-icons";
+import { 
+    faUser,
+    faPen,
+    faMusic,
+    faKeyboard, 
+    faBars, 
+    faInfoCircle, 
+    faFileAlt,
+    faCog,
+    faArrowAltCircleLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 import App from "./app";
 import "./index.css";
 
 // Globally import FontAwesome icons
-library.add(faUser, faPen, faMusic, faKeyboard, faBars, faInfoCircle, faFileAlt);
+library.add(
+    faUser,
+    faPen,
+    faMusic, 
+    faKeyboard, 
+    faBars, 
+    faInfoCircle, 
+    faFileAlt,
+    faCog,
+    faArrowAltCircleLeft,
+);
 
 /*
 TODO

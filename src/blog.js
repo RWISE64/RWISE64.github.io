@@ -21,7 +21,7 @@ function BlogArticle(path, markdownName, articleName, date, icon = "file-alt", d
 }
 
 const blogArticles = [
-    BlogArticle("test1", "shoutsToTheVoid.md", "Shouts to the Void", "1/9/21", "info-circle", "A quick overview of the purpose of this blog."),
+    BlogArticle("shouts-to-the-void", "shoutsToTheVoid.md", "Shouts to the Void", "1/9/21", "info-circle", "A quick overview of the purpose of this blog."),
 ];
 
 export default function Blog() {
@@ -31,19 +31,39 @@ export default function Blog() {
     let articleLinks = [];
     blogArticles.forEach(article => {
         articleRoutes.push(
-            <Route path={`${path}/${article.path}`}>
-                <GenericArticle
-                    markdownName={article.markdownName}
-                    articleName={article.articleName}
-                    date={article.date}
-                    description={article.description}
-                />
+            <Route 
+                path={`${path}/${article.path}`}
+                key={article.path}
+            >
+                <div>
+                    <Link
+                        className={"blog-back-button"}
+                        to={`${url}`}
+                    >
+                        <FontAwesomeIcon icon={"arrow-alt-circle-left"} />
+                        Back to Blog
+                    </Link>
+                    <GenericArticle
+                        markdownName={article.markdownName}
+                        articleName={article.articleName}
+                        date={article.date}
+                        description={article.description}
+                    />
+                </div>
+                <Link
+                    className={"blog-back-button"}
+                    to={`${url}`}
+                >
+                    <FontAwesomeIcon icon={"arrow-alt-circle-left"} />
+                    Back to Blog
+                </Link>
             </Route>
         );
         articleLinks.push(
             <Link
                 className={"blog-link"}
                 to={`${url}/${article.path}`}
+                key={article.path}
             >
                 <div className={"blog-link-icon"}>
                     <FontAwesomeIcon icon={article.icon} />
