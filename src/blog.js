@@ -22,6 +22,7 @@ function BlogArticle(path, markdownName, articleName, date, icon = "file-alt", d
 
 const blogArticles = [
     BlogArticle("shouts-to-the-void", "shoutsToTheVoid.md", "Shouts to the Void", "1/9/21", "info-circle", "A quick overview of the purpose of this blog."),
+    BlogArticle("new-year-new-ambitions", "newYearNewAmbitions.md", "New Year, New Ambitions", "1/13/21", "calendar-check", "A reflection on 2020 and my overambitious goals for 2021."),
 ];
 
 export default function Blog() {
@@ -44,7 +45,7 @@ export default function Blog() {
                         Back to Blog
                     </Link>
                     <GenericArticle
-                        markdownName={article.markdownName}
+                        markdownName={"blog/" + article.markdownName}
                         articleName={article.articleName}
                         date={article.date}
                         description={article.description}
