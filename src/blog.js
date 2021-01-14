@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     Switch,
     Route,
@@ -36,7 +37,7 @@ export default function Blog() {
                 path={`${path}/${article.path}`}
                 key={article.path}
             >
-                <div>
+                <div id={"blog-top-content"}>
                     <Link
                         className={"blog-back-button"}
                         to={`${url}`}
@@ -53,6 +54,7 @@ export default function Blog() {
                 </div>
                 <Link
                     className={"blog-back-button"}
+                    id={"blog-bottom-back-button"}
                     to={`${url}`}
                 >
                     <FontAwesomeIcon icon={"arrow-alt-circle-left"} />
