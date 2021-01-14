@@ -11,6 +11,7 @@ import {
     faFileAlt,
     faCog,
     faArrowAltCircleLeft,
+    faCalendarCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
 import App from "./app";
@@ -27,6 +28,7 @@ library.add(
     faFileAlt,
     faCog,
     faArrowAltCircleLeft,
+    faCalendarCheck,
 );
 
 /*
