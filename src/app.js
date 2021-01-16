@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -9,6 +9,7 @@ import SidebarNavigation from "./header/sidebar";
 import About from "./about";
 import GenericArticle from "./article/genericArticle"
 import Blog from "./blog";
+
 
 class App extends Component {
     constructor(props) {
@@ -27,6 +28,7 @@ class App extends Component {
 
     render() {
         let blur = (this.state.sidebarOpen) ? " blur" : "";
+
         return (
             <Router>
                 <Header
@@ -65,3 +67,4 @@ class App extends Component {
 }
 
 export default App;
+
