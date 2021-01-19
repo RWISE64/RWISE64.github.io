@@ -10,9 +10,12 @@ function setBottomButtonVisibility(visible) {
 
 function updateBottomButtonVisibility() {
     const topContent = document.getElementById("blog-top-content");
-    let topContentHeight = topContent.getBoundingClientRect().height;
-    let contentAreaHeight = topContent.parentElement.parentElement.getBoundingClientRect().height;
-    setBottomButtonVisibility(topContentHeight > contentAreaHeight);
+    // TODO Separate buttons and generic article... this check shouldn't be called on About
+    if (topContent !==  null) {
+        let topContentHeight = topContent.getBoundingClientRect().height;
+        let contentAreaHeight = topContent.parentElement.parentElement.getBoundingClientRect().height;
+        setBottomButtonVisibility(topContentHeight > contentAreaHeight);
+    }
 }
 
 export default function GenericArticle(props) {
