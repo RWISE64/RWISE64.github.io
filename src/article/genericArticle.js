@@ -22,10 +22,8 @@ export default function GenericArticle(props) {
     useEffect(() => {
         updateBottomButtonVisibility();
         // Shocking, another terrible idea
-        // Couldn't effectively get an event to trigger following the fake load, so
-        // the bottom button wasn't being conditionally added until the window was 
-        // resized.
-        // Again, terrible. Hopefully this'll be removed when I deal with the markdown loading
+        // Just adds the bottom button after the text should be loaded
+        // Need to replace this with promises/callbacks eventually
         setTimeout(() => updateBottomButtonVisibility(), 550);
         window.addEventListener("resize", () => {
             updateBottomButtonVisibility();
