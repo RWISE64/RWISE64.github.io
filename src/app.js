@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
+    HashRouter,
 } from "react-router-dom";
 import Header from "./header/header";
 import SidebarNavigation from "./header/sidebar";
@@ -28,7 +28,7 @@ class App extends Component {
     render() {
         let blur = (this.state.sidebarOpen) ? " blur" : "";
         return (
-            <Router>
+            <HashRouter>
                 <Header
                     toggleSidebar={() => this.toggleSidebar()}
                 />
@@ -59,7 +59,7 @@ class App extends Component {
                         sidebarOpen={this.state.sidebarOpen}
                     />
                 </div>
-            </Router>
+            </HashRouter>
         );
     }
 }
