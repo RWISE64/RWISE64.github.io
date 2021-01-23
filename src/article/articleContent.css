@@ -1,0 +1,13 @@
+.article-content {
+    /* 
+    Stolen from a css-tricks comment
+    Uses font-size transition then opacity transition to fake a height transition
+    */
+    transition: font-size 500ms 0ms ease-in, opacity 500ms 500ms ease-in;
+}
+
+
+.article-content.unloaded {
+    font-size: 0;
+    opacity: 0;
+}

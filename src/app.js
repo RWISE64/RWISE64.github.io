@@ -22,7 +22,6 @@ class App extends Component {
         this.setState({
             sidebarOpen: !this.state.sidebarOpen
         });
-        console.log(this.state.sidebarOpen);
     }
 
     render() {
@@ -32,7 +31,7 @@ class App extends Component {
                 <Header
                     toggleSidebar={() => this.toggleSidebar()}
                 />
-                <div className={"content-area"}>
+                <div className={"content-area"} id={"content-area"}>
                     <div className={"content" + blur}>
                         <Switch>
                             <Route path="/blog">
