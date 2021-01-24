@@ -1,8 +1,8 @@
 import React, { Component, useEffect } from "react";
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
+    HashRouter,
 } from "react-router-dom";
 import Header from "./header/header";
 import SidebarNavigation from "./header/sidebar";
@@ -23,18 +23,17 @@ class App extends Component {
         this.setState({
             sidebarOpen: !this.state.sidebarOpen
         });
-        console.log(this.state.sidebarOpen);
     }
 
     render() {
         let blur = (this.state.sidebarOpen) ? " blur" : "";
 
         return (
-            <Router>
+            <HashRouter>
                 <Header
                     toggleSidebar={() => this.toggleSidebar()}
                 />
-                <div className={"content-area"}>
+                <div className={"content-area"} id={"content-area"}>
                     <div className={"content" + blur}>
                         <Switch>
                             <Route path="/blog">
@@ -61,7 +60,7 @@ class App extends Component {
                         sidebarOpen={this.state.sidebarOpen}
                     />
                 </div>
-            </Router>
+            </HashRouter>
         );
     }
 }
