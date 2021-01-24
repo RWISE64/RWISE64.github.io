@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { Component, useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./sidebar.css";
@@ -9,7 +9,7 @@ class SidebarNavigation extends Component {
     render() {
         const closed = (this.props.sidebarOpen) ? "" : " closed";
 
-        return(
+        return (
             <div className={"sidebar"}>
                 <nav className={"sidebar-nav" + closed}>
                     <SidebarLinks />
@@ -20,10 +20,11 @@ class SidebarNavigation extends Component {
 }
 
 function SidebarLinks() {
-    // TODO Check whether this is necessary in the sidebar
-    let currentLink = window.location.pathname.split('/')[1];
-    // Probably not good practice, but triggers this to rerender on url switch
-    useLocation();
+    function getCurrentLink() {
+        return window.location.href.split('/')[4];
+    }
+
+    const [currentLink, setCurrentLink] = useState(getCurrentLink());
 
     const links = linkParams.map(link => {
         const active = (link.href === currentLink) ? "sidebar-link-active" : "";
@@ -32,6 +33,13 @@ function SidebarLinks() {
                 className={"sidebar-link " + active}
                 key={link.name}
                 to={"/" + link.href}
+                /* 
+                Far from ideal solution, but works fairly well.
+                Want active link to update onclick, but the link doesn't actually update until a split second later
+                */
+                onClick={() => {
+                    setTimeout(() => setCurrentLink(getCurrentLink()), 1);
+                }}
             >
                 <FontAwesomeIcon icon={link.icon} />
                 <span>{link.name}</span>
@@ -44,7 +52,7 @@ function SidebarLinks() {
             {links}
         </>
     );
-    
+
 }
 
 export default SidebarNavigation;

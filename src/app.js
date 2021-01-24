@@ -10,6 +10,7 @@ import About from "./about";
 import GenericArticle from "./article/genericArticle"
 import Blog from "./blog";
 
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -26,6 +27,7 @@ class App extends Component {
 
     render() {
         let blur = (this.state.sidebarOpen) ? " blur" : "";
+
         return (
             <HashRouter>
                 <Header
@@ -64,3 +66,4 @@ class App extends Component {
 }
 
 export default App;
+

@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import linkParams from "./links";
@@ -44,9 +44,11 @@ function HeaderLogo() {
 }
 
 function HeaderDesktopNavigation() {
-    let currentLink = window.location.pathname.split('/')[1];
-    // Probably not good practice, but triggers this to rerender on url switch
-    useLocation();
+    function getCurrentLink() {
+        return window.location.href.split('/')[4];
+    }
+
+    const [currentLink, setCurrentLink] = useState(getCurrentLink());
 
     const links = linkParams.map(link => {
         const active = (link.href === currentLink) ? "header-link-active" : "";
@@ -55,6 +57,13 @@ function HeaderDesktopNavigation() {
                 className={"header-link " + active}
                 key={link.name}
                 to={"/" + link.href}
+                /* 
+                Far from ideal solution, but works fairly well.
+                Want active link to update onclick, but the link doesn't actually update until a split second later
+                */
+                onClick={() => {
+                    setTimeout(() => setCurrentLink(getCurrentLink()), 1);
+                }}
             >
                 <span>{link.name}</span>
                 <FontAwesomeIcon icon={link.icon} />
@@ -67,6 +76,8 @@ function HeaderDesktopNavigation() {
         </nav>
     );
 }
+
+
 
 class HeaderBurger extends Component {
     render() {
