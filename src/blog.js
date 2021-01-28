@@ -8,6 +8,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import GenericArticle from "./article/genericArticle";
+import postWrapper from "./article/postWrapper";
 import "./blog.css";
 
 function BlogArticle(path, markdownName, articleName, date, icon = "file-alt", description = "") {
@@ -31,35 +32,32 @@ export default function Blog() {
 
     let articleRoutes = [];
     let articleLinks = [];
+    const WrappedGenericArticle = postWrapper(
+        GenericArticle,
+        url,
+        "Blog"
+    );
+    
     blogArticles.forEach(article => {
         articleRoutes.push(
-            <Route 
+            <Route
                 path={`${path}/${article.path}`}
                 key={article.path}
             >
-                <div id={"blog-top-content"}>
-                    <Link
-                        className={"blog-back-button"}
-                        to={`${url}`}
-                    >
-                        <FontAwesomeIcon icon={"arrow-alt-circle-left"} />
-                        Back to Blog
-                    </Link>
-                    <GenericArticle
-                        markdownName={"blog/" + article.markdownName}
-                        articleName={article.articleName}
-                        date={article.date}
-                        description={article.description}
-                    />
-                </div>
-                <Link
+                <WrappedGenericArticle
+                    markdownName={"blog/" + article.markdownName}
+                    articleName={article.articleName}
+                    date={article.date}
+                    description={article.description}
+                />
+                {/* <Link
                     className={"blog-back-button"}
                     id={"blog-bottom-back-button"}
                     to={`${url}`}
                 >
                     <FontAwesomeIcon icon={"arrow-alt-circle-left"} />
                     Back to Blog
-                </Link>
+                </Link> */}
             </Route>
         );
         articleLinks.push(
