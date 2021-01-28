@@ -50,14 +50,6 @@ export default function Blog() {
                     date={article.date}
                     description={article.description}
                 />
-                {/* <Link
-                    className={"blog-back-button"}
-                    id={"blog-bottom-back-button"}
-                    to={`${url}`}
-                >
-                    <FontAwesomeIcon icon={"arrow-alt-circle-left"} />
-                    Back to Blog
-                </Link> */}
             </Route>
         );
         articleLinks.push(
