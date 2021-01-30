@@ -9,6 +9,7 @@ import SidebarNavigation from "./header/sidebar";
 import About from "./about";
 import GenericPost from "./article/genericPost"
 import Blog from "./blog";
+import MusicPerformance from "./article/musicPerformance";
 
 
 class App extends Component {
@@ -40,9 +41,11 @@ class App extends Component {
                                 <Blog />
                             </Route>
                             <Route path="/music">
-                                <GenericPost
-                                    markdownName={"music.md"}
-                                    articleName={"Music"}
+                                <MusicPerformance
+                                    songName={"Lonely Town"}
+                                    date={"1/29/21"}
+                                    url={"https://vimeo.com/506362883"}
+                                    markdownName={"music/lonelyTown.md"}
                                 />
                             </Route>
                             <Route path="/projects">
