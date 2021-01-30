@@ -64,23 +64,16 @@ export default function PostList(PostComponent, pageName, postObjects) {
         );
     });
 
-    /* TODO switch to just a function */
-    return class extends React.Component {
-        constructor(props) {
-            super(props);
-        }
-
-        render() {
-            return (
-                <Switch>
-                    {postRoutes}
-                    <Route path="/">
-                        <div className="post-links">
-                            {postLinks}
-                        </div>
-                    </Route>
-                </Switch>
-            );
-        }
+    return function() {
+        return (
+            <Switch>
+                {postRoutes}
+                <Route path="/">
+                    <div className="post-links">
+                        {postLinks}
+                    </div>
+                </Route>
+            </Switch>
+        );
     }
 }
