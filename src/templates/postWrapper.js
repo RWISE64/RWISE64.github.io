@@ -24,7 +24,7 @@ function updateBottomButtonVisibility() {
  * @param {string} name name of the page to be returned t
  * @return {React.Component} new component where WrappedComponent is wrapped by buttons
  */
-export default function postWrapper(WrappedComponent, url, name) {
+export default function PostWrapper(WrappedComponent, url, name) {
     return class extends React.Component {
         constructor(props) {
             super(props);

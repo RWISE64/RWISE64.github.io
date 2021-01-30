@@ -7,9 +7,9 @@ import {
 import Header from "./header/header";
 import SidebarNavigation from "./header/sidebar";
 import About from "./about";
-import GenericPost from "./article/genericPost"
+import GenericPost from "./templates/genericPost"
 import Blog from "./blog";
-import MusicPerformance from "./article/musicPerformance";
+import MusicPerformance from "./templates/musicPerformance";
 
 
 class App extends Component {
