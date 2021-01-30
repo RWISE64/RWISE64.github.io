@@ -5,10 +5,19 @@ import {
     Link,
     useRouteMatch,
 } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import PostWrapper from "./postWrapper";
 import "./postList.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+export function GenericPostInformation(path, markdownName, postName, date, icon = "file-alt", description = "") {
+    this.path = path;
+    this.markdownName = markdownName;
+    this.postName = postName;
+    this.date = date;
+    this.icon = icon;
+    this.description = description;
+}
 
 export default function PostList(PostComponent, pageName, postObjects) {
     let { path, url } = useRouteMatch();
@@ -55,6 +64,7 @@ export default function PostList(PostComponent, pageName, postObjects) {
         );
     });
 
+    /* TODO switch to just a function */
     return class extends React.Component {
         constructor(props) {
             super(props);

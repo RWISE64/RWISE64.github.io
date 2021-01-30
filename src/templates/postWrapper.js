@@ -43,7 +43,7 @@ export default function PostWrapper(WrappedComponent, url, name) {
 
         render() {
             return (
-                <div class="post-wrapper">
+                <div className={"post-wrapper"}>
                     <Link
                         className={"back-button"}
                         to={`${url}`}
