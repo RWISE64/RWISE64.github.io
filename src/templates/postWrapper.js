@@ -26,10 +26,6 @@ function updateBottomButtonVisibility() {
  */
 export default function PostWrapper(WrappedComponent, url, name) {
     return class extends React.Component {
-        constructor(props) {
-            super(props);
-        }
-
         componentDidMount() {
             updateBottomButtonVisibility();
             // Shocking, another terrible idea

@@ -10,11 +10,11 @@ import PostWrapper from "./postWrapper";
 import "./postList.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export function GenericPostInformation(path, markdownName, postName, date, icon = "file-alt", description = "") {
+export function GenericPostInformation(path, markdownName, postName, postDate, icon = "file-alt", description = "") {
     this.path = path;
     this.markdownName = markdownName;
     this.postName = postName;
-    this.date = date;
+    this.postDate = postDate;
     this.icon = icon;
     this.description = description;
 }
@@ -38,9 +38,7 @@ export default function PostList(PostComponent, pageName, postObjects) {
             >
                 <WrappedGenericPost
                     markdownName={`${pageName.toLowerCase()}/${post.markdownName}`}
-                    postName={post.postName}
-                    date={post.date}
-                    description={post.description}
+                    post={post}
                 />
             </Route>
         );
@@ -56,7 +54,7 @@ export default function PostList(PostComponent, pageName, postObjects) {
                 <div className={"post-link-info"}>
                     <div className={"post-link-header"}>
                         <h1 className={"post-link-title"}>{post.postName}</h1>
-                        <span className={"post-link-date"}>{post.date}</span>
+                        <span className={"post-link-date"}>{post.postDate}</span>
                     </div>
                     <p className={"post-link-description"}>{post.description}</p>
                 </div>
