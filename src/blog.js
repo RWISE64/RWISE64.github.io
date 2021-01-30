@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import GenericArticle from "./article/genericArticle";
+import GenericPost from "./article/genericPost";
 import postWrapper from "./article/postWrapper";
 import "./blog.css";
 
@@ -32,8 +32,8 @@ export default function Blog() {
 
     let articleRoutes = [];
     let articleLinks = [];
-    const WrappedGenericArticle = postWrapper(
-        GenericArticle,
+    const WrappedGenericPost = postWrapper(
+        GenericPost,
         url,
         "Blog"
     );
@@ -44,7 +44,7 @@ export default function Blog() {
                 path={`${path}/${article.path}`}
                 key={article.path}
             >
-                <WrappedGenericArticle
+                <WrappedGenericPost
                     markdownName={"blog/" + article.markdownName}
                     articleName={article.articleName}
                     date={article.date}

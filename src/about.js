@@ -1,9 +1,9 @@
 import React from "react";
-import GenericArticle from "./article/genericArticle";
+import GenericPost from "./article/genericPost";
 
 export default function About() {
     return (
-        <GenericArticle
+        <GenericPost
             markdownName={"about.md"}
             articleName={"About"}
         />

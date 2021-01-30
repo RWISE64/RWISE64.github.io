@@ -1,4 +1,4 @@
-.generic-article {
+.generic-post {
     padding: 20px;
     background-color: var(--secondary-background);
     max-width: 800px;
@@ -8,20 +8,20 @@
     margin-right: auto;
 }
 
-.generic-article-header {
+.generic-post-header {
     display: flex;
     justify-content: space-between;
 }
 
-.generic-article-title {
+.generic-post-title {
     margin: 0;
 }
 
-.generic-article-date {
+.generic-post-date {
     align-self: center;
 }
 
-.generic-article-description {
+.generic-post-description {
     font-style: italic;
     font-weight: 300;
     font-size: .9em;
@@ -29,7 +29,7 @@
 }
 
 @media screen and (max-width: 500px) {
-    .generic-article-header {
+    .generic-post-header {
         display: initial;
     }
 }
