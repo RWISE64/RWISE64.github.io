@@ -2,22 +2,14 @@ import MusicPost from "./templates/musicPost";
 import PostList from "./templates/postList";
 import { GenericPostInformation } from "./templates/postList";
 
-const MusicPostInformation = function(path, markdownName, postName, postDate, videoUrl, icon = "music", description = "") {
+const MusicPostInformation = function(path, markdownName, postName, postDate, videoUrl, description = "", icon = "music") {
     let postInformation = new GenericPostInformation(path, markdownName, postName, postDate, icon, description);
     postInformation.videoUrl = videoUrl;
-    // TODO Add recording date
     return postInformation;
 }
 
-{/* <MusicPerformance
-songName={"Lonely Town"}
-date={"1/29/21"}
-url={"https://vimeo.com/506362883"}
-markdownName={"music/lonelyTown.md"}
-/> */}
-
 const musicPosts = [
-    new MusicPostInformation("lonely-town", "lonelyTown.md", "Lonely Town", "1/29/21", "https://vimeo.com/506362883", "music", "Lonely Town from Bernstein's On the Town"),
+    new MusicPostInformation("lonely-town", "lonelyTown.md", "Lonely Town", "1/30/21", "https://vimeo.com/506362883", "Leonard Bernstein", "microphone-alt"),
 ];
 
 export default function Music() {
