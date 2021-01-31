@@ -1,11 +1,14 @@
 import React from "react";
-import GenericArticle from "./article/genericArticle";
+import GenericPost from "./templates/genericPost";
+import { GenericPostInformation } from "./templates/postList";
 
 export default function About() {
+    const postInformation = new GenericPostInformation("", "shoutsToTheVoid.md", "About", "");
+
     return (
-        <GenericArticle
+        <GenericPost
             markdownName={"about.md"}
-            articleName={"About"}
+            post={postInformation}
         />
     );
 }

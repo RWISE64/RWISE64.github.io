@@ -12,6 +12,7 @@ import {
     faCog,
     faArrowAltCircleLeft,
     faCalendarCheck,
+    faMicrophoneAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 import App from "./app";
@@ -29,6 +30,7 @@ library.add(
     faCog,
     faArrowAltCircleLeft,
     faCalendarCheck,
+    faMicrophoneAlt
 );
 
 /*

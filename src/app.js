@@ -7,8 +7,9 @@ import {
 import Header from "./header/header";
 import SidebarNavigation from "./header/sidebar";
 import About from "./about";
-import GenericArticle from "./article/genericArticle"
+import GenericPost from "./templates/genericPost"
 import Blog from "./blog";
+import Music from "./music";
 
 
 class App extends Component {
@@ -40,15 +41,12 @@ class App extends Component {
                                 <Blog />
                             </Route>
                             <Route path="/music">
-                                <GenericArticle
-                                    markdownName={"music.md"}
-                                    articleName={"Music"}
-                                />
+                                <Music />
                             </Route>
                             <Route path="/projects">
-                                <GenericArticle
+                                <GenericPost
                                     markdownName={"projects.md"}
-                                    articleName={"Projects"}
+                                    postName={"Projects"}
                                 />
                             </Route>
                             <Route path="/">
