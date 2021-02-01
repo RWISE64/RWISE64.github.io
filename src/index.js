@@ -14,6 +14,7 @@ import {
     faCalendarCheck,
     faMicrophoneAlt,
     faHouseDamage,
+    faGlassCheers,
 } from "@fortawesome/free-solid-svg-icons";
 
 import App from "./app";
@@ -33,6 +34,7 @@ library.add(
     faCalendarCheck,
     faMicrophoneAlt,
     faHouseDamage,
+    faGlassCheers,
 );
 
 /*
