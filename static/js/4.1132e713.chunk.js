@@ -1,2 +1,0 @@
-(this["webpackJsonppersonal-website"]=this["webpackJsonppersonal-website"]||[]).push([[4],{172:function(e,s,t){"use strict";t.r(s),s.default=t.p+"static/media/newYearNewAmbitions.564fb6f5.md"}}]);
-//# sourceMappingURL=4.1132e713.chunk.js.map
