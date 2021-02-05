@@ -1,0 +1,22 @@
+.about {
+    padding-top: 20px;
+    background: linear-gradient(75deg, var(--default-pink) 35%, var(--default-purple) 85%);
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-content {
+    background-color: var(--secondary-background);
+    padding: 20px;
+}
+
+.about-header {
+    padding: 20px;
+    
+}
+
+.about, .about-content {
+    border-radius: 8px;
+}
