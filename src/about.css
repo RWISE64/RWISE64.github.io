@@ -1,5 +1,5 @@
 .about {
-    padding-top: 20px;
+    margin-top: 20px;
     background: linear-gradient(75deg, var(--default-pink) 35%, var(--default-purple) 85%);
     max-width: 800px;
     width: 100%;
@@ -13,10 +13,18 @@
 }
 
 .about-header {
-    padding: 20px;
-    
+    padding: 0 20px;
 }
 
 .about, .about-content {
     border-radius: 8px;
+}
+
+.about-photo {
+    position: relative;
+    top: -15px;
+    left: 30px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-text);
 }
