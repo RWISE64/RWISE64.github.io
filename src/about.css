@@ -14,6 +14,7 @@
 
 .about-header {
     padding: 0 20px;
+    display: flex;
 }
 
 .about, .about-content {
@@ -27,4 +28,22 @@
     height: 150px;
     border-radius: 50%;
     border: 2px solid var(--primary-text);
+}
+
+.about-header-info {
+    padding-left: 60px;
+    padding-top: 30px;
+}
+
+.about-header-title {
+    text-transform: uppercase;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.about-header-subtitle {
+    font-style: italic;
+    font-size: .9em;
+    font-weight: 300;
 }
