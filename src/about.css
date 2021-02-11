@@ -26,6 +26,7 @@
     top: -15px;
     left: 30px;
     height: 150px;
+    width: 128px;
     border-radius: 50%;
     border: 2px solid var(--primary-text);
 }
@@ -40,10 +41,30 @@
     font-family: "Roboto Slab", serif;
     font-size: 1.4em;
     font-weight: bold;
+    line-height: 1.3em;
 }
 
 .about-header-subtitle {
     font-style: italic;
     font-size: .9em;
     font-weight: 300;
+    line-height: 1.3em;
+}
+
+@media screen and (max-width: 500px) {
+    .about-header {
+        flex-direction: column;
+    }
+
+    .about-photo {
+        left: 0px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .about-header-info {
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
 }
